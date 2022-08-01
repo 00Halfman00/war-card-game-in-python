@@ -95,7 +95,7 @@ while game:
             player_one.add_cards(player_two_cards)
             war = False
 
-        if player_two_cards[-1].value > player_one_cards[-1].value:   # if player two has the highest card, he adds both cards drawn to his deck
+        elif player_two_cards[-1].value > player_one_cards[-1].value:   # if player two has the highest card, he adds both cards drawn to his deck
             player_two.add_cards(player_one_cards)
             player_two.add_cards(player_two_cards)
             war = False
@@ -109,7 +109,7 @@ while game:
                 game = False
                 break
 
-            if len(player_two.all_cards) < 5:           # if player two does not have at least five more cards, then go home
+            elif len(player_two.all_cards) < 5:           # if player two does not have at least five more cards, then go home
                 print('Player two is out of cards')
                 print('Player One wins the game')
                 game = False
